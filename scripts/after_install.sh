@@ -1,4 +1,6 @@
 #!/bin/bash
+/tmp/sleep.sh
+
 echo 'run after_install.sh: ' >> /home/ec2-user/mydemo/deploy.log
 
 echo 'cd /home/ec2-user/mydemo' >> /home/ec2-user/mydemo/deploy.log

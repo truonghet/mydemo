@@ -23,7 +23,8 @@ jobs:
       id: deploy
       run: |
         aws deploy create-deployment \
-        --application-name mynodeapp2 \
-        --deployment-group-name mynodeapp2-grp \
+        --file-exists-behavior OVERWRITE \
+        --application-name mydemo \
+        --deployment-group-name mydemo-grp \
         --deployment-config-name CodeDeployDefault.OneAtATime \
         --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
