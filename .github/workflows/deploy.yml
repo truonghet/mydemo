@@ -24,7 +24,7 @@ jobs:
       run: |
         aws deploy create-deployment \
         --file-exists-behavior OVERWRITE \
-        --application-name mydemo \
-        --deployment-group-name mydemo-grp \
+        --application-name myapp \
+        --deployment-group-name myapp-grp \
         --deployment-config-name CodeDeployDefault.OneAtATime \
         --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
